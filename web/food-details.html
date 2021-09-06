@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHMYW8</title>
+    <!-- App Custom Styles -->
+    <link rel="stylesheet" href="assests/styles/app.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'
+        integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'
+        integrity='sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'
+        integrity='sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepaginator/1.1.0/bootstrap-datepaginator.min.css'
+        integrity='sha512-EgN0XRK2OQdV3d2X5uPypqluNbMQ5cELhLy2Y1/KPqBhuYIWyDQlsH+q9TyrUbaDQIcBJ1cLq4aXQ5SKlF1mJA=='
+        crossorigin='anonymous' />
+
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm py-sm-0 py-2">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand" href="home.html">
+                    <img class="logo" src="assests/img/logo.svg" alt="" />
+                </a>
+                <div class="d-flex flex-grow-1 align-items-center" id="navbarSupportedContent">
+                    <div class="w-55 mx-auto d-none d-sm-block">
+                        <div class="datepicker-pagination">
+                            <div id="datepaginator"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ms-sm-0 ms-auto">
+                        <a href="javascript:void(0);" class="text-reset me-3 hidden-arrow d-sm-none d-inline-block"
+                            data-mdb-toggle="collapse" data-mdb-target="#collapseExample" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <i class="fas fa-calendar-day fs-3"></i>
+                        </a>
+                        <a class="text-reset me-3 hidden-arrow" href="#">
+                            <i class="fas fa-shopping-cart fs-3"></i>
+                            <span class="badge rounded-pill badge-notification theme-bg-primary">1</span>
+                        </a>
+                        <a class="d-flex align-items-center userlogin" href="javascript:void(0);"
+                            id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                                class="rounded-circle img-thumbnail shadow-sm" width="50" height="50" alt=""
+                                loading="lazy" />
+                            <span class="user-name ms-1 d-md-block d-none">Swamy Sam</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end theme-border border-2"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="settings.html"><i class="fas fa-user me-2"></i>
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="my-cart.html"><i class="fas fa-shopping-cart me-2"></i>My
+                                    Carts</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="settings.html"><i
+                                        class="fas fa-cogs me-2"></i>Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>
+                                    Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="app-wrapper">
+        <section class="datepaginatorModal d-sm-none d-block theme-bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 collapse" id="collapseExample">
+                        <div class="datepicker-pagination pt-4 pb-3">
+                            <div id="datepaginatorModal"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="search-restaurants food-details pt-3 pb-5">
+            <div class="container-fluid px-lg-5">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-2 col-md-12 text-lg-start text-center">
+                        <h3 class="theme-text-primary">Salad Bar </h3>
+                    </div>
+                    <div class="col-lg-8 col-md-12 mx-auto filter">
+                        <div class="row">
+                            <div class="col-sm-3 col-12">
+                                <div class="food-fats ms-sm-2 d-flex justify-content-center">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Carb</option>
+                                        <option value="1">Low Carb1</option>
+                                        <option value="2">Low Carb2</option>
+                                        <option value="3">Low Carb3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-12 d-grid">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-primary rounded-0 text-capitalize w-75">
+                                        Protein (XX%)
+                                    </button>
+                                    <button type="button" class="btn btn-info rounded-0 text-capitalize w-50">
+                                        Price (XX%)
+                                    </button>
+                                    <button type="button" class="btn btn-danger rounded-0 text-capitalize w-50">
+                                        Carb (XX%)
+                                    </button>
+                                    <button type="button" class="btn btn-success rounded-0 text-capitalize w-25">
+                                        Fat (XX%)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 text-lg-end text-center">
+                        <a href="#" class="btn btn-theme rounded-pill px-5 my-2">
+                            <h6 class="mb-0 text-capitalize">Kart</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row search-restaurants-content">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/nnNCCQfSNsc/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Indian Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/IGfIGP5ONV0/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Salad Bar</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image overflow-hidden hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/bpPTlXWTOvg/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Japanese Cafe</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/LV2p9Utbkbw/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Green Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image overflow-hidden hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/bpPTlXWTOvg/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Japanese Cafe</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/LV2p9Utbkbw/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Green Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/nnNCCQfSNsc/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Indian Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/IGfIGP5ONV0/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Salad Bar</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image overflow-hidden hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/bpPTlXWTOvg/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Japanese Cafe</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/LV2p9Utbkbw/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Green Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image overflow-hidden hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/bpPTlXWTOvg/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Japanese Cafe</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="card single-item my-3">
+                            <div class="bg-image hover-overlay ripple hover-zoom" data-mdb-ripple-color="light">
+                                <img src="https://source.unsplash.com/LV2p9Utbkbw/1200x800" class="img-fluid"
+                                    loading="lazy" alt="img" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title mt-0 mb-0">Green Restaurant</h4>
+                                <div class="d-flex align-items-center star-ratings">
+                                    <span class="AED">30 AED</span>
+                                    <span class="myratings fw-bold mx-2">4.0</span>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="addcart-btn d-flex justify-content-end">
+                                    <a href="my-cart.html"
+                                        class="btn btn-sm btn-theme px-4 rounded-pill text-capitalize">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-center mt-5">
+                        <button type="button" class="btn btn-theme text-capitalize btn-lg rounded-pill px-5">
+                            <h6 class="mb-0">Load More</h6>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer theme-bg-secondary">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Company</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">The Team</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">OHMYW8 Corporate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Help &amp; Support</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Offer terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="index.html" class="footer-logo text-decoration-none text-dark">
+                        <img src="assests/img/logo.svg" width="220" loading="lazy" alt="logo">
+                    </a>
+                    <div class="footer-wigdet mt-3">
+                        <ul class="social m-0 p-0">
+                            <li class="facebook">
+                                <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#"><i class="fab fa-instagram fa-fw"></i></a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+                            </li>
+                        </ul>
+                        <div class="mt-3 app-language d-flex align-items-center py-1 ps-2">
+                            <i class="fas fa-globe-asia fa-fw" style="font-size: 1.2rem;"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Language</option>
+                                <option value="1">English</option>
+                                <option value="2">Hindi</option>
+                                <option value="3">Urdu</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom border-top">
+            <div class="container">
+                <div class="copy-rights row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0"> &copy; 2021 All Reserved by OHMYW8.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+        integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
+        crossorigin='anonymous'></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
+        integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=='
+        crossorigin='anonymous'></script>
+
+    <script src="assests/js/owl-carousel-custom.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'
+        integrity='sha512-l7jogMOI6ZWZJEY7lREjFdQum46y2+kpp/mnbJx7O+izymO9eGjL6Y4o7cEJNBdouhVHpti2Wd79Q6aIjPwxtQ=='
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'
+        integrity='sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=='
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepaginator/1.1.0/bootstrap-datepaginator.min.js'
+        integrity='sha512-3J96R1p1S5M8+tLuiWn4UVDX4eQ9aGewPVcRC9LyVh4RGJESKdHzFLKmuidlViXS/392ZTp7H4R88gwv4vhouA=='
+        crossorigin='anonymous'></script>
+    <script src="assests/js/app.js"></script>
+    <script>
+        $(window).ready(function () {
+            var options = {
+                fillWidth: true,
+                highlightSelectedDate: true,
+                highlightToday: true,
+                // itemWidth: 35,
+                // navItemWidth: 20,
+                onSelectedDateChanged: null,
+                selectedDate: moment().clone().startOf('day'),
+                selectedDateFormat: 'YYYY-MM-DD',
+                // selectedItemWidth: 140,
+                text: 'ddd<br/>Do',
+                textSelected: 'dddd<br/>Do, MMMM YYYY',
+                // width: 0,
+                startDate: moment(new Date(-8640000000000000)),
+                startDateFormat: 'YYYY-MM-DD',
+                endDate: moment(new Date(8640000000000000)),
+                endDateFormat: 'YYYY-MM-DD',
+            }
+
+            $('#datepaginator').datepaginator(options);
+        });
+        $(window).ready(function () {
+            var options1 = {
+                fillWidth: true,
+                highlightSelectedDate: true,
+                highlightToday: true,
+                // itemWidth: 35,
+                // navItemWidth: 20,
+                onSelectedDateChanged: null,
+                selectedDate: moment().clone().startOf('day'),
+                selectedDateFormat: 'YYYY-MM-DD',
+                // selectedItemWidth: 140,
+                text: 'ddd<br/>Do',
+                textSelected: 'dddd<br/>Do, MMMM YYYY',
+                width: 320,
+                startDate: moment(new Date(-8640000000000000)),
+                startDateFormat: 'YYYY-MM-DD',
+                endDate: moment(new Date(8640000000000000)),
+                endDateFormat: 'YYYY-MM-DD',
+            }
+
+            $('#datepaginatorModal').datepaginator(options1);
+        });
+
+    </script>
+
+</body>
+
+</html>

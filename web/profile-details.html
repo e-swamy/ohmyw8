@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHMYW8</title>
+    <!-- App Custom Styles -->
+    <link rel="stylesheet" href="assests/styles/app.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand" href="home.html">
+                    <img class="logo" src="assests/img/logo.svg" alt="" />
+                </a>
+                <div class="d-flex flex-grow-1 align-items-center mb-md-0 mb-2 mb-lg-0" id="navbarSupportedContent">
+                    <div class="search-area mx-lg-auto d-none d-lg-block">
+                        <div class="searchbox d-flex align-items-center input-group">
+                            <div class="d-flex align-items-center w-40 ps-2">
+                                <i class="fas fa-map-marker-alt fa-fw ms-2 theme-text-primary"></i>
+                                <input type="text" placeholder="Your location..." class="form-control border-0">
+                            </div>
+                            <span class="border-right mx-1"></span>
+                            <div class="d-flex align-items-center w-55">
+                                <i class="fas fa-search fa-fw ms-2 theme-text-primary"></i>
+                                <input type="text" placeholder="Search Restaurants..." class="form-control border-0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ms-auto">
+                        <button class="btn btn-link bg-transparent d-lg-none d-inline-block" data-mdb-toggle="modal"
+                            data-mdb-target="#searchModal">
+                            <i class="fas fa-search fa-fw fa-2x ms-2 theme-text-primary"></i>
+                        </button>
+                        <!-- Avatar -->
+                        <a class="dropdown-toggle d-flex align-items-center userlogin" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                                class="rounded-circle img-thumbnail shadow-sm" width="50" height="50" alt=""
+                                loading="lazy" />
+                            <span class="user-name ms-1 d-md-block d-none">Swamy Sam</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end theme-border border-2"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="settings.html"><i class="fas fa-user me-2"></i>
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="my-cart.html"><i class="fas fa-shopping-cart me-2"></i>My
+                                    Carts</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="settings.html"><i
+                                        class="fas fa-cogs me-2"></i>Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>
+                                    Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="app-wrapper">
+        <section class="profile-details theme-bg-dark py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12 col-sm-12 mx-auto">
+                        <div class="card card-body theme-bg-secondary p-md-5 p-4">
+                            <form action="">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-8 col-12">
+                                        <h3 class="title fw-bold">Personal Details </h3>
+                                    </div>
+                                    <div class="col-sm-4 col-12 d-flex justify-content-sm-end">
+                                        <div class="profile-img">
+                                            <img src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                                                class="rounded-circle img-thumbnail theme-bg-primary" height="250"
+                                                width="250" alt="">
+                                            <a href="#" class="edit">
+                                                <i
+                                                    class="fas fa-plus-circle fa-2x bg-white rounded-circle theme-text-primary"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputUserName"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">User Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="inputUserName">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row align-items-center">
+                                    <label for="inputPassword"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Gender</label>
+                                    <div class="col-md-9">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-7 col-lg-12">
+                                        <div class="mb-3 row ps-xl-2">
+                                            <label for="DateOfBirth"
+                                                class="col-xl-5 col-lg-3 col-md-3 col-form-label fw-bold text-dark text-md-end">Birth
+                                                Year</label>
+                                            <div class="col-xl-7 col-lg-9 col-md-9">
+                                                <input type="password" class="form-control" id="DateOfBirth">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-12">
+                                        <div class="mb-3 row">
+                                            <label for="inputPhone"
+                                                class="col-xl-3 col-lg-3 col-md-3 col-form-label fw-bold text-dark text-md-end">Mobile</label>
+                                            <div class="col-xl-9 col-lg-9 col-md-9">
+                                                <input type="Phone" class="form-control" id="inputPhone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputHomeAddress"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Home
+                                        Address</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="inputHomeAddress">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputOfficeAddress"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Office
+                                        Address</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="inputOfficeAddress">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row align-items-lg-center">
+                                    <label for="inputPassword"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Allergens</label>
+                                    <div class="col-md-9">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioNuts"
+                                                value="option1">
+                                            <label class="form-check-label" for="inlineRadioNuts">Nuts</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioLactose"
+                                                value="option2">
+                                            <label class="form-check-label" for="inlineRadioLactose">Lactose</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioSoy"
+                                                value="option3">
+                                            <label class="form-check-label" for="inlineRadioSoy">Soy</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioGluten"
+                                                value="option4">
+                                            <label class="form-check-label" for="inlineRadioGluten">Gluten</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioFish"
+                                                value="option5">
+                                            <label class="form-check-label" for="inlineRadioFish">Fish</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineRadioOthers"
+                                                value="option6">
+                                            <label class="form-check-label" for="inlineRadioOthers">Others</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="offset-md-3 col-md-9">
+                                        <input type="text" class="form-control" placeholder="As mentioned here." id="inputOtherDetails">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <h3 class="title fw-bold my-5">Nutritional Data</h3>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputWeight"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Weight</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3 position-relative">
+                                                <input type="text" class="form-control pe-5"
+                                                    id="inputWeight">
+                                                <span
+                                                    class="inputgroup-text-indicate-right text-white-50">Kgs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputBodyFat"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Body
+                                        Fat</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3 position-relative">
+                                                <input type="text" class="form-control pe-5"
+                                                    id="inputBodyFat">
+                                                <span
+                                                    class="inputgroup-text-indicate-right text-white-50">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="> 28%" id="inputPutX1">
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="0.75" id="inputPutY1">
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="> 20%" id="inputPutX2">
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="0.80" id="inputPutY2">
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="< 20%" id="inputPutX3">
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="0.90" id="inputPutY3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputGoals"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Goals</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <select class="text-center form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected>Select Fat Loss</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4 align-items-center">
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Lean Body Mass</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.20" id="inputPutY4">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Maintain</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.50" id="inputPutY5">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Fat Loss</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.60" id="inputPutY6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputActivityLevels"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Activity
+                                        Levels</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <select class="text-center form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected>Select Activity Levels</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row my-3 align-items-center">
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Sedentary</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.20" id="inputPutY7">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Light</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.50" id="inputPutY8">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Moderate</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.60" id="inputPutY9">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Explosive</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="1.60" id="inputPutY10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputCalories"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Calorie
+                                        Intake</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="text-center form-control"
+                                                    value="2014">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Calorie Deficit</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="200" id="inputPutY11">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Calorie Surplus </div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="120" id="inputPutY12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="inputDiet"
+                                        class="col-md-3 col-form-label fw-bold text-dark text-md-end">Diet
+                                        (Macro)</label>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <select class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected>Select Carb</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Protein</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="40%" id="inputPutY12">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Carbohydrates </div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="25%" id="inputPutY12">
+                                            </div>
+                                            <div class="col-md-6 text-center py-2">
+                                                <div class="fw-bolder">Fats</div>
+                                            </div>
+                                            <div class="col-md-6 py-2">
+                                                <input type="text"
+                                                    class="text-center form-control w-50 mx-auto"
+                                                    value="35%" id="inputPutY12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 pt-5 text-center">
+                                        <a href="home.html" type="button"
+                                            class="px-5 btn btn-theme text-capitalize btn-lg rounded-pill">
+                                            <h6 class="mb-0"> Save &amp; Update Details</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer theme-bg-secondary">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Company</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">The Team</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">OHMYW8 Corporate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Help &amp; Support</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-wigdet">
+                        <h5 class="fw-normal footer-wigdet-title">Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Offer terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="index.html" class="footer-logo text-decoration-none text-dark">
+                        <img src="assests/img/logo.svg" width="220" loading="lazy" alt="logo">
+                    </a>
+                    <div class="footer-wigdet mt-3">
+                        <ul class="social m-0 p-0">
+                            <li class="facebook">
+                                <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#"><i class="fab fa-instagram fa-fw"></i></a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+                            </li>
+                        </ul>
+                        <div class="mt-3 app-language d-flex align-items-center py-1 ps-2">
+                            <i class="fas fa-globe-asia fa-fw" style="font-size: 1.2rem;"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Language</option>
+                                <option value="1">English</option>
+                                <option value="2">Hindi</option>
+                                <option value="3">Urdu</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom border-top">
+            <div class="container">
+                <div class="copy-rights row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0"> &copy; 2021 All Reserved by OHMYW8.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="searchModal" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1"
+        aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background-color: rgba(255, 255, 255, 0.822);">
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="search-area">
+                        <div class="searchbox d-flex align-items-center input-group">
+                            <div class="d-flex align-items-center w-40 ps-2">
+                                <i class="fas fa-map-marker-alt fa-fw ms-2 theme-text-primary"></i>
+                                <input type="text" placeholder="Your location..." class="form-control border-0">
+                            </div>
+                            <div class="d-flex align-items-center w-55 ps-2">
+                                <i class="fas fa-search fa-fw ms-2 theme-text-primary"></i>
+                                <input type="text" placeholder="Search Restaurants..." class="form-control border-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+        integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
+        crossorigin='anonymous'></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <script src="assests/js/app.js"></script>
+</body>
+
+</html>

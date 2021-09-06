@@ -1,0 +1,177 @@
+::selection {
+  background: $theme-green;
+  color: $theme-dark;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  color: $theme-dark !important;
+  font-size: 0.875rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "Nunito Sans", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.theme-text-primary {
+  color: $theme-green !important;
+}
+
+.theme-bg-primary {
+  background-color: $theme-green !important;
+}
+.theme-text-dark {
+  color: $theme-dark !important;
+}
+
+.theme-bg-dark {
+  background-color: $theme-dark !important;
+}
+
+.theme-text-secondary {
+  color: $theme-gray !important;
+}
+
+.theme-bg-secondary {
+  background-color: $theme-gray !important;
+}
+
+.theme-border-color {
+  border-color: $theme-green !important;
+}
+.theme-border {
+  border: 1px solid $theme-green !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.col-form-label {
+  font-size: 15px !important;
+}
+.inputgroup-text-indicate-right {
+  position: absolute;
+  right: 2rem;
+  top: 10px;
+  z-index: 1;
+}
+.mCSB_inside>.mCSB_container {
+  margin-right: 5px !important;
+}
+.mCSB_scrollTools .mCSB_draggerContainer {
+  position: absolute;
+  top: 0;
+  left: 14px !important;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+.form-switch .form-check-input {
+  border: 1px solid #fff !important;
+  &[type="checkbox"]:checked {
+    background-color: $theme-dark !important;
+    border: 1px solid $theme-green !important;
+    &:after {
+      background-color: $theme-green !important;
+    }
+  }
+}
+
+.btn,
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.btn-group > .btn-group:not(:last-child) > .btn.rounded-pill,
+.btn-group > .btn.rounded-pill:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.btn-group > .btn-group:not(:first-child) > .btn.rounded-pill,
+.btn-group > .btn.rounded-pill:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn.rounded-pill {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.btn-theme {
+  color: $theme-dark !important;
+  background-color: $theme-green !important;
+  border-color: $theme-green !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.575) !important;
+
+  &:hover,
+  &:active,
+  &.active {
+    color: $theme-dark !important;
+    background-color: darken($theme-green, 15) !important;
+    border-color: darken($theme-green, 15) !important;
+  }
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    color: $theme-dark !important;
+    background-color: darken($theme-green, 15) !important;
+    border-color: darken($theme-green, 15) !important;
+  }
+}
+.btn-outline-theme {
+  color: $theme-dark !important;
+  background-color: transparent !important;
+  border-color: $theme-green !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.575) !important;
+
+  &:hover,
+  &:active,
+  &.active {
+    color: $theme-dark !important;
+    background-color: darken($theme-green, 15) !important;
+    border-color: darken($theme-green, 15) !important;
+  }
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    color: $theme-dark !important;
+    background-color: darken($theme-green, 15) !important;
+    border-color: darken($theme-green, 15) !important;
+  }
+}
+
+.fs-10 {
+  font-size: 10px !important;
+}
+.fs-11 {
+  font-size: 11px !important;
+}
+.fs-12 {
+  font-size: 12px !important;
+}
+.fs-13 {
+  font-size: 13px !important;
+}
+.fs-14 {
+  font-size: 14px !important;
+}
+.fs-15 {
+  font-size: 15px !important;
+}
+.fs-16 {
+  font-size: 16px !important;
+}
